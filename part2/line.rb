@@ -29,6 +29,6 @@ class ThickLine < Line
     a = (y2 - y1) / (x2 - x1)
     b = y1 - (a * x1)
     y_sec = a * x3 + b
-    (y_sec - y3).abs <= @thickness
+    (y_sec - y3).abs <= thickness
   end
 end
