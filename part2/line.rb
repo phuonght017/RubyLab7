@@ -12,7 +12,7 @@ class Line
   end
 
   def pass_through(x3, y3)
-    (x3 - @x1) / (@x2 - @x1) == (y3 - @y1) / (@y2 - @y1)
+    (x3 - x1) / (x2 - x1) == (y3 - y1) / (y2 - y1)
   end
 end
 
@@ -26,8 +26,8 @@ class ThickLine < Line
   end
 
   def pass_through(x3, y3)
-    a = (@y2 - @y1) / (@x2 - @x1)
-    b = @y1 - (a * @x1)
+    a = (y2 - y1) / (x2 - x1)
+    b = y1 - (a * x1)
     y_sec = a * x3 + b
     (y_sec - y3).abs <= @thickness
   end
